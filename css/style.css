@@ -1,0 +1,94 @@
+:root{
+    --Color1:#780000;
+    --Color2:#c1121f;
+    --Color3:#fdf0d5;
+    --Color4:#003049;
+    --Color5:#669bbc;
+    --SizeFoto: 350px;
+    --Padding1: 10px;
+    --margen1: 10px;
+    /* --font-family: ; */
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+@media (min-width: 1024px) and (max-width: 1400px) {        
+    nav{            
+        height: fit-content;
+        background-color: var(--Color1);
+        display: flex;    
+        align-items: center;
+        padding: 1rem;    
+        color: white;
+        padding-inline: 3em;  
+        border-bottom: solid white 1px;
+    }
+    #logoNav{
+        width: auto;
+        height: 2em;
+    }
+    .enlaces{
+        margin-right: auto;
+        margin-left: auto;    
+    }
+    .navLink{
+        padding-inline: 1rem;
+        text-decoration: none;
+        color: white;
+    }
+    .btnPrimario{
+       padding: var(--Padding1); 
+       border-radius: 50px;
+       border-style: none;
+       background-color: var(--Color3);
+       color: var(--Color1);
+    }
+    header{
+        padding: 20px;
+        background-color: var(--Color1);
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #descripcionPerfil{
+        width: 50%;
+    }
+    #encabezado{
+        margin: var(--margen1);
+    }
+    #presentacion{
+        margin: var(--margen1);
+    }
+    .btnPerfil{
+        margin: var(--margen1);
+    }
+    #fotoPerfil{
+        width: var(--SizeFoto);
+        height: var(--SizeFoto);
+        border-radius: 100%;
+    }
+}
+
+/*Diseño interfaz celulares pequeños*/
+/* @media (min-width: 350px) {
+    nav{
+        background-color: var(--Color1);
+        height: fit-content;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+    }
+    #logoNav{
+        height: 2rem;
+    }
+    
+} */
+
+/* Diseño para dispositivos grandes */
+/* @media (){} */
+
+/* Diseño para dispositivos extra grandes */
+/* @media () {} */
