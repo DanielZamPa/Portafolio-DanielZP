@@ -20,13 +20,14 @@
         display: flex;    
         align-items: center;
         padding: 1rem;    
-        color: white;
+        color: var(--Color3);
         padding-inline: 3em;  
-        border-bottom: solid white 1px;
+        border-bottom: solid var(--Color3) 1px;
     }
     #logoNav{
         width: auto;
         height: 2em;
+        cursor: pointer;
     }
     .enlaces{
         margin-right: auto;
@@ -35,7 +36,14 @@
     .navLink{
         padding-inline: 1rem;
         text-decoration: none;
-        color: white;
+        color: var(--Color3);
+        transition: 0.5s;
+    }
+    .navLink:hover{
+        border-radius: 20px;
+        border-style: none;
+        background-color: var(--Color3);
+        color: var(--Color1);
     }
     .btnPrimario{
        padding: var(--Padding1); 
@@ -43,11 +51,16 @@
        border-style: none;
        background-color: var(--Color3);
        color: var(--Color1);
+       transition: 0.5s;
+    }
+    .btnPrimario:hover{
+        background-color: var(--Color4);
+        color: var(--Color3);
     }
     header{
         padding: 20px;
         background-color: var(--Color1);
-        color: white;
+        color: var(--Color3);
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -55,19 +68,54 @@
     #descripcionPerfil{
         width: 50%;
     }
+    #nombrePerfil{
+        margin: var(--margen1);
+    }
     #encabezado{
         margin: var(--margen1);
     }
     #presentacion{
         margin: var(--margen1);
     }
+    #containerBtnPeril{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
     .btnPerfil{
         margin: var(--margen1);
+        display: flex;
+        border-radius: 50%;
+        border-style: none;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: border-radius 1s;
+    }
+    .btnPerfil:hover{
+        border-radius: 10px;
+    }
+    .imgBtnPeril{
+        height: 25px;
+        width: auto;
     }
     #fotoPerfil{
         width: var(--SizeFoto);
         height: var(--SizeFoto);
         border-radius: 100%;
+    }
+    footer{
+        background-color: var(--Color5);
+        color: var(--Color3);
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+    }
+    #logoFooter{
+        width: 10em;      
+        margin-right: var(--margen1);  
     }
 }
 
