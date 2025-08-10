@@ -56,6 +56,7 @@
     .btnPrimario:hover{
         background-color: var(--Color4);
         color: var(--Color3);
+        cursor: pointer;
     }
     header{
         padding: 20px;
@@ -93,6 +94,7 @@
         align-items: center;
         overflow: hidden;
         transition: border-radius 1s;
+        cursor: pointer;
     }
     .btnPerfil:hover{
         border-radius: 10px;
@@ -105,6 +107,17 @@
         width: var(--SizeFoto);
         height: var(--SizeFoto);
         border-radius: 100%;
+    }    
+    #seccion1{
+        padding: 1cm;
+    }
+    #seccion2{
+        background-color: var(--Color1);
+        color: var(--Color3);
+        padding: 1cm;
+    }
+    #seccion3{
+        padding: 1cm;
     }
     footer{
         background-color: var(--Color5);
