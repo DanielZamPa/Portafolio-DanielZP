@@ -7,13 +7,16 @@
     --SizeFoto: 350px;
     --Padding1: 10px;
     --margen1: 10px;
-    /* --font-family: ; */
+    --font-family: "Google Sans Code", monospace;
 }
 *{
     margin: 0;
     padding: 0;
 }
 @media (min-width: 1024px) and (max-width: 1400px) {        
+    body{
+        font-family: var(--font-family);
+    }
     nav{            
         height: fit-content;
         background-color: var(--Color1);
@@ -46,6 +49,7 @@
         color: var(--Color1);
     }
     .btnPrimario{
+        font-family: var(--font-family);
        padding: var(--Padding1); 
        border-radius: 50px;
        border-style: none;
