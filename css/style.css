@@ -1,159 +1,436 @@
-:root{
-    --Color1:#780000;
-    --Color2:#c1121f;
-    --Color3:#fdf0d5;
-    --Color4:#003049;
-    --Color5:#669bbc;
-    --SizeFoto: 350px;
+:root {
+    --Color1: #780000;
+    --Color2: #c1121f;
+    --Color3: #fdf0d5;
+    --Color4: #003049;
+    --Color5: #669bbc;
     --Padding1: 10px;
     --margen1: 10px;
     --font-family: "Google Sans Code", monospace;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
+    
 }
-@media (min-width: 1024px) and (max-width: 1400px) {        
-    body{
-        font-family: var(--font-family);
-    }
-    nav{            
-        height: fit-content;
-        background-color: var(--Color1);
-        display: flex;    
-        align-items: center;
-        padding: 1rem;    
-        color: var(--Color3);
-        padding-inline: 3em;  
-        border-bottom: solid var(--Color3) 1px;
-    }
-    #logoNav{
-        width: auto;
-        height: 2em;
-        cursor: pointer;
-    }
-    .enlaces{
-        margin-right: auto;
-        margin-left: auto;    
-    }
-    .navLink{
-        padding-inline: 1rem;
-        text-decoration: none;
-        color: var(--Color3);
-        transition: 0.5s;
-    }
-    .navLink:hover{
-        border-radius: 20px;
-        border-style: none;
-        background-color: var(--Color3);
-        color: var(--Color1);
-    }
-    .btnPrimario{
-        font-family: var(--font-family);
-       padding: var(--Padding1); 
-       border-radius: 50px;
-       border-style: none;
-       background-color: var(--Color3);
-       color: var(--Color1);
-       transition: 0.5s;
-    }
-    .btnPrimario:hover{
-        background-color: var(--Color4);
-        color: var(--Color3);
-        cursor: pointer;
-    }
-    header{
-        padding: 20px;
-        background-color: var(--Color1);
-        color: var(--Color3);
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    #descripcionPerfil{
-        width: 50%;
-    }
-    #nombrePerfil{
-        margin: var(--margen1);
-    }
-    #encabezado{
-        margin: var(--margen1);
-    }
-    #presentacion{
-        margin: var(--margen1);
-    }
-    #containerBtnPeril{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-    }
-    .btnPerfil{
-        margin: var(--margen1);
-        display: flex;
-        border-radius: 50%;
-        border-style: none;
-        width: 40px;
-        height: 40px;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        transition: border-radius 1s;
-        cursor: pointer;
-    }
-    .btnPerfil:hover{
-        border-radius: 10px;
-    }
-    .imgBtnPeril{
-        height: 25px;
-        width: auto;
-    }
-    #fotoPerfil{
-        width: var(--SizeFoto);
-        height: var(--SizeFoto);
-        border-radius: 100%;
-    }    
-    #seccion1{
-        padding: 1cm;
-    }
-    #seccion2{
-        background-color: var(--Color1);
-        color: var(--Color3);
-        padding: 1cm;
-    }
-    #seccion3{
-        padding: 1cm;
-    }
-    footer{
-        background-color: var(--Color5);
-        color: var(--Color3);
-        display: flex;
-        justify-content: center;
-        align-items: center;        
-    }
-    #logoFooter{
-        width: 10em;      
-        margin-right: var(--margen1);  
-    }
+
+/* @media (min-width: 1024px) and (max-width: 1400px) {         */
+body {
+    font-family: var(--font-family);    
+    width: 100%;
 }
+
+nav {
+    max-height: 30px;
+    height: fit-content;
+    background-color: var(--Color1);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: var(--Color3);
+    padding-inline: 3em;
+    border-bottom: solid var(--Color3) 1px;
+}
+
+#logoNav {
+    width: auto;
+    height: 2em;
+    cursor: pointer;
+}
+
+.enlaces {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navLink {
+    padding-inline: 1rem;
+    text-decoration: none;
+    color: var(--Color3);
+    transition: 0.5s;
+}
+
+.navLink:hover {
+    border-radius: 20px;
+    border-style: none;
+    background-color: var(--Color3);
+    color: var(--Color1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background: var(--Color3);
+    padding: 20px;
+    padding-top: 40px;
+    border-radius: 8px;
+    text-align: left;
+    width: 500px;
+    max-width: 90%;
+    position: relative;
+    color: var(--Color4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-height: 70vh;
+    height: fit-content;
+    overflow-y: auto; /* Usar auto es mejor que scroll para que solo aparezca si es necesario */
+    /* Estilos de scrollbar para Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--Color2) var(--Color3); /* pulgar (thumb) y riel (track) */
+}
+
+/* Estilos de scrollbar para Chrome, Safari, Edge */
+.modal-content::-webkit-scrollbar {
+    width: 12px; /* Ancho de la scrollbar vertical */
+    height: 12px; /* Alto de la scrollbar horizontal */
+}
+.modal-content::-webkit-scrollbar-track {
+    background: var(--Color3); /* Color de la pista de fondo */
+    border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--Color2);
+    border-radius: 20px;
+    /* Crea un efecto de "padding" alrededor del pulgar */
+    border: 3px solid var(--Color3);
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--Color1); /* Cambia de color al pasar el ratón */
+}
+
+/* --- Estilos para las flechas (botones) --- */
+.modal-content::-webkit-scrollbar-button {
+    background-color: var(--Color5);
+    /* Para un look moderno, a menudo se ocultan */
+    /* display: none; */
+}
+
+/* Estilo para la esquina (donde se cruzan scrollbar vertical y horizontal) */
+.modal-content::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+/* Botón de cierre */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btnPrimario {
+    font-family: var(--font-family);
+    padding: var(--Padding1);
+    border-radius: 50px;
+    border: 1px solid var(--Color1);    
+    background-color: var(--Color3);
+    color: var(--Color1);
+    transition: 0.5s;
+}
+
+.btnPrimario:hover {
+    border-color: var(--Color4);
+    background-color: var(--Color4);
+    color: var(--Color3);
+    cursor: pointer;
+}
+
+.btnSecundario {
+    font-family: var(--font-family);
+    padding: var(--Padding1);
+    border-radius: 50px;
+    border: 1px solid var(--Color1);
+    background-color: transparent;
+    color: var(--Color1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btnSecundario:hover {
+    background-color: var(--Color1);
+    color: var(--Color3);
+}
+
+/* Estilo del contenedor */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botón de Mi trabajo */
+.dropdown-btn {    
+    color: white;    
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Color1);
+    font-family: var(--font-family);
+}
+
+/* Contenido del dropdown (oculto por defecto) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+/* Estilo de los enlaces dentro del dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Hover sobre los enlaces */
+.dropdown-content a:hover {
+    border-radius: 20px;
+    border-style: none;
+    background-color: var(--Color3);
+    color: var(--Color1);
+}
+
+/* Mostrar el contenido al hacer hover */
+.dropdown:hover .dropdown-content {    
+    display: block;
+}
+
+
+header {
+    padding: 20px;
+    background-color: var(--Color1);
+    color: var(--Color3);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+}
+
+#descripcionPerfil {
+    width: 50%;
+}
+
+#nombrePerfil {
+    margin: var(--margen1);
+}
+
+#encabezado {
+    margin: var(--margen1);
+}
+
+#presentacion {
+    margin: var(--margen1);
+}
+
+#containerBtnPeril {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.btnPerfil {
+    margin: var(--margen1);
+    display: flex;
+    border-radius: 50%;
+    border-style: none;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: border-radius 1s;
+    cursor: pointer;
+}
+
+.btnPerfil:hover {
+    border-radius: 10px;
+}
+
+.imgBtnPeril {
+    height: 25px;
+    width: auto;
+}
+
+#fotoPerfil {
+    /* Tamaño responsivo: Mínimo 200px, preferido 25% del ancho de la pantalla, máximo 350px */
+    width: clamp(200px, 25vw, 400px);
+    height: clamp(200px, 25vw, 400px);
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#seccionHabilidades {
+    padding: 1cm;
+    text-align: center;
+}
+
+#proyectos {
+    background-color: var(--Color1);
+    color: var(--Color3);
+    padding: 1cm;
+    display: flex;
+}
+
+#seccion3 {
+    padding: 1cm;
+}
+
+.containerHabilidades {
+    width: 100%;
+    padding: var(--Padding1);
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardHabilidad {
+    max-width: 100%;
+    max-height: 100%;
+    width: clamp(70%, 2vw, 90%);        
+    height: 40vh;
+    border: solid var(--Color1) 1px;
+    padding: var(--Padding1);
+    overflow-y: auto;
+    /* Ocultar scrollbar en Firefox */
+    scrollbar-width: none;
+}
+
+/* Ocultar scrollbar en Chrome, Safari y Edge */
+.cardHabilidad::-webkit-scrollbar {
+    display: none;
+}
+
+.tarjetaTecnologias {
+    background-color: var(--Color5);
+}
+
+footer {
+    background-color: var(--Color5);
+    color: var(--Color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoFooter {
+    width: 10em;
+    margin-right: var(--margen1);
+}
+
+/* --- Estilos para el Formulario de Contacto --- */
+
+.modal-content h2 {
+    text-align: center;
+    color: var(--Color1);
+    margin-bottom: 20px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content fieldset {
+    border: 1px solid var(--Color5);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--Color1);
+}
+
+.modal-content label {
+    font-size: 0.9em;
+    margin-bottom: -5px;
+    /* Acercar la etiqueta al input */
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"],
+.modal-content select,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--Color5);
+    border-radius: 4px;
+    background-color: #fff;
+    color: var(--Color4);
+    font-family: var(--font-family);
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.modal-content input:focus,
+.modal-content select:focus,
+.modal-content textarea:focus {
+    outline: none;
+    border-color: var(--Color1);
+    box-shadow: 0 0 5px rgba(193, 18, 31, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#subir{    
+    size: clamp();
+    left: 90vw;
+    bottom: 5vh;
+    position: sticky;
+    border-style: none;
+    border-radius: 50%;    
+    background-color: var(--Color4);
+}
+
+/* } */
 
 /*Diseño interfaz celulares pequeños*/
-/* @media (min-width: 350px) {
-    nav{
-        background-color: var(--Color1);
-        height: fit-content;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        color: white;
-    }
-    #logoNav{
-        height: 2rem;
-    }
-    
-} */
+@media (max-width: 480px) {
+  /* Estilos para celulares pequeños */
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Estilos para celulares grandes o phablets */
+}
 
-/* Diseño para dispositivos grandes */
-/* @media (){} */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para tablets en modo vertical u horizontal */
+}
 
-/* Diseño para dispositivos extra grandes */
-/* @media () {} */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Estilos para laptops estándar */
+}
+@media (min-width: 1441px) {
+  /* Estilos para pantallas grandes o monitores externos */
+}
