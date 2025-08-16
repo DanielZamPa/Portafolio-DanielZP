@@ -40,7 +40,14 @@
             <div class="modal-content">
                 <span id="closeModal" class="close">&times;</span>
                 <h2>Contacto</h2>
-                <form action="#" method="post">
+                <form 
+                  id="contactForm" 
+                  name="contact"
+                  method="POST" 
+                  data-netlify="true"
+                >
+                    <!-- Campo oculto que Netlify usa para identificar el formulario en envíos con JS -->
+                    <input type="hidden" name="form-name" value="contact" />
                     <fieldset>
                         <legend>Información Personal</legend>
                         <label for="nombre">Nombre completo:</label>
@@ -84,8 +91,8 @@
                         <button type="reset" class="btnSecundario">Limpiar</button>
                         <button type="submit" class="btnPrimario">Enviar</button>
                     </div>
-
-                </form>
+                    <p id="form-status"></p> <!-- Elemento para mostrar mensajes de estado -->
+                </form> 
             </div>
         </div>
     </nav>
