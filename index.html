@@ -44,10 +44,15 @@
                   id="contactForm" 
                   name="contact"
                   method="POST" 
-                  data-netlify="true"
+                  data-netlify="true" 
+                  data-netlify-honeypot="bot-field"
                 >
                     <!-- Campo oculto que Netlify usa para identificar el formulario en envíos con JS -->
                     <input type="hidden" name="form-name" value="contact" />
+                    <!-- Campo "Honeypot" para engañar a los bots de spam. No lo borres. -->
+                    <p style="display: none;">
+                      <label>No rellenes esto si eres humano: <input name="bot-field" /></label>
+                    </p>
                     <fieldset>
                         <legend>Información Personal</legend>
                         <label for="nombre">Nombre completo:</label>
