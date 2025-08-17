@@ -1,0 +1,22 @@
+footer {
+    background-color: var(--Color5);
+    color: var(--Color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoFooter {
+    width: 10em;
+    margin-right: var(--margen1);
+}
+
+#subir{    
+    size: clamp();
+    left: 90vw;
+    bottom: 5vh;
+    position: sticky;
+    border-style: none;
+    border-radius: 50%;    
+    background-color: var(--Color4);
+}

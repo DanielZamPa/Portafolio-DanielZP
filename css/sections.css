@@ -1,0 +1,46 @@
+#seccionHabilidades {
+    padding: 1cm;
+    text-align: center;
+}
+
+#proyectos {
+    background-color: var(--Color1);
+    color: var(--Color3);
+    padding: 1cm;
+    display: flex;
+}
+
+#seccion3 {
+    padding: 1cm;
+}
+
+.containerHabilidades {
+    width: 100%;
+    padding: var(--Padding1);
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardHabilidad {
+    max-width: 100%;
+    max-height: 100%;
+    width: clamp(70%, 2vw, 90%);        
+    height: 40vh;
+    border: solid var(--Color1) 1px;
+    padding: var(--Padding1);
+    overflow-y: auto;
+    /* Ocultar scrollbar en Firefox */
+    scrollbar-width: none;
+}
+
+/* Ocultar scrollbar en Chrome, Safari y Edge */
+.cardHabilidad::-webkit-scrollbar {
+    display: none;
+}
+
+.tarjetaTecnologias {
+    background-color: var(--Color5);
+}

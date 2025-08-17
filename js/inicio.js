@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Animación del logo en la pantalla de carga
     tl.add({
-      targets: '#splash-logo',
+      targets: '#splash-logo, #tituloSplash',
       scale: [0.5, 1],
       opacity: [0, 1],
       duration: 1000,
     })
     // 2. Desaparición de la pantalla de carga
     .add({
-      targets: '#splash-screen',
+      targets: '#splash-logo, #tituloSplash',
       opacity: 0,
       duration: 800,
       complete: () => {

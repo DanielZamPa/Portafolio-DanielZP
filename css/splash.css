@@ -1,3 +1,15 @@
+:root {
+    --Color1: #780000;
+    --Color2: #c1121f;
+    --Color3: #fdf0d5;
+    --Color4: #003049;
+    --Color5: #669bbc;
+    --Padding1: 10px;
+    --nav-height: 65px; /* Altura de la barra de navegación */
+    --margen1: 10px;
+    --font-family: "Google Sans Code", monospace;
+    --sombras: -1px -1px 5px #000000;
+}
 /* --- Estilos para la Pantalla de Carga (Splash Screen) --- */
 #splash-screen {
     position: fixed;
@@ -9,10 +21,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Asegura que esté por encima de todo */
+    z-index: 9999;    
 }
 
 #splash-logo {
     width: clamp(100px, 20vw, 200px);
-    opacity: 0; /* Empezará invisible para la animación */
+    opacity: 0;    
+}
+
+#tituloSplash {
+    color: var(--Color3);
 }
