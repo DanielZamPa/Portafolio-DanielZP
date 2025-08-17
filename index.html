@@ -98,42 +98,53 @@
             </p>
             <div class="containerHabilidades">
                 <div class="cardHabilidad" id="cardFrontend">
-                    <h3 class="tituloHabilidades">
-                        Frontend
-                    </h3>
-                    <p class="descripcionHabilidades">
-                        Desarrollo de interfaces modernas, responsivas y optimizadas para la experiencia del usuario.
-                    </p>
-                    <div class="tarjetaTecnologias">
-                        <img src="./assets/icons/icons8-html-5 (1).svg" alt="html5">
-                        <img src="./assets/icons/icons8-css3 (1).svg" alt="css3">
-                        <img src="./assets/icons/icons8-javascript.svg" alt="javascript">
+                    <div class="contenidoCard">
+                        <h3 class="tituloHabilidades">
+                            Frontend
+                        </h3>
+                        <p class="descripcionHabilidades">
+                            Desarrollo de interfaces modernas, responsivas y optimizadas para la experiencia del
+                            usuario.
+                        </p>
+                    </div>
+                    <div class="tecnologias-container">
+                        <div class="tarjetaTecnologias">
+                            <img src="./assets/icons/icons8-html-5 (1).svg" alt="html5">
+                            <span>HTML</span>
+                        </div>
+                        <div class="tarjetaTecnologias">
+                            <img src="./assets/icons/icons8-css3 (1).svg" alt="css3">
+                            <span>CSS</span>
+                        </div>
+                        <div class="tarjetaTecnologias">
+                            <img src="./assets/icons/icons8-javascript.svg" alt="javascript">
+                            <span>JAVASCRIPT</span>
+                        </div>
                     </div>
                 </div>
-                <div class="cardHabilidad" id="cardBackend">
-                    <ul id="listaTecnologias">
-                        <li class="liTecnologia">
-                            <div class="tarjetaTecnologias">
-                                <img src="./assets/icons/file_type_python_icon_130221.svg" alt="">
-                            </div>
-                        </li>
-                        <li class="liTecnologia">
-                            <div class="tarjetaTecnologias">
-
-                            </div>
-                        </li>
-                        <li class="liTecnologia">
-                            <div class="tarjetaTecnologias">
-
-                            </div>
-                        </li>
-                    </ul>
-                    <h3 class="tituloHabilidades">
-                        Backend
-                    </h3>
-                    <p class="descripcionHabilidades">
-                        Creación de aplicaciones escalables y orientadas a buenas prácticas de programación.
-                    </p>
+                <div class="cardHabilidad" id="cardBackend">                    
+                    <div class="contenidoCard">
+                        <h3 class="tituloHabilidades">
+                            Backend
+                        </h3>
+                        <p class="descripcionHabilidades">
+                            Creación de aplicaciones escalables y orientadas a buenas prácticas de programación.
+                        </p>
+                    </div>                    
+                    <div class="tecnologias-container">
+                        <div class="tarjetaTecnologias">
+                            <img src="./assets/icons/file_type_python_icon_130221.svg" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="tarjetaTecnologias">
+                            <img src="./assets/icons/java_original_logo_icon_146458.svg" alt="Java">
+                            <span>JAVA</span>
+                        </div>
+                        <div class="tarjetaTecnologias">
+                            <img src="./assets/icons/mysql_original_wordmark_logo_icon_146417.svg" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -214,8 +225,10 @@
                     <label for="mensaje">Descripción:</label>
                     <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-                    <label for="adjunto">Adjuntar archivo (opcional):</label>
-                    <input type="file" id="adjunto" name="adjunto">
+                    <label for="adjunto" class="btn-adjuntar-archivo">Adjuntar archivo</label>                    
+                    <span id="nombre-archivo"></span>
+                    <input type="file" id="adjunto" name="adjunto" style="display: none;">
+                    
                 </fieldset>
 
                 <!-- Botones modal -->

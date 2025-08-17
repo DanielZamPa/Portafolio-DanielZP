@@ -1,18 +1,4 @@
 @media (min-width: 1025px) and (max-width: 1440px) {
-    :root {
-        --Color1: #780000;
-        --Color2: #c1121f;
-        --Color3: #fdf0d5;
-        --Color4: #003049;
-        --Color5: #669bbc;
-        --Padding1: 10px;
-        --nav-height: 65px;
-        /* Altura de la barra de navegación */
-        --margen1: 10px;
-        --font-family: "Google Sans Code", monospace;
-        --sombras: -1px -1px 5px #000000;
-    }
-
     /* --- Estilos para la Pantalla de Carga (Splash Screen) --- */
     #splash-screen {
         position: fixed;
