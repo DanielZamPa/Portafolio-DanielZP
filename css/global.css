@@ -1,0 +1,69 @@
+:root {
+    --Color1: #780000;
+    --Color2: #c1121f;
+    --Color3: #fdf0d5;
+    --Color4: #003049;
+    --Color5: #669bbc;
+    --Padding1: 10px;
+    --nav-height: 65px; /* Altura de la barra de navegación */
+    --margen1: 10px;
+    --font-family: "Google Sans Code", monospace;
+    --sombras: -1px -1px 5px #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Mejor manejo del modelo de caja */
+}
+
+/* --- Estilo para el texto seleccionado --- */
+/* Para la mayoría de los navegadores modernos */
+::selection {
+    background-color: var(--Color2); /* Fondo rojo vibrante de tu paleta */
+    color: var(--Color3);            /* Texto claro para un buen contraste */
+}
+
+/* Para compatibilidad con Firefox */
+::-moz-selection {
+    background-color: var(--Color2);
+    color: var(--Color3);
+}
+
+body {
+    font-family: var(--font-family);    
+    width: 100%;
+    background-color: var(--Color3); /* Aseguramos un color de fondo base */
+}
+.btnPrimario {
+    font-family: var(--font-family);
+    padding: var(--Padding1);
+    border-radius: 50px;
+    border: 1px solid var(--Color1);    
+    background-color: var(--Color3);
+    color: var(--Color1);
+    transition: 0.5s;
+}
+
+.btnPrimario:hover {
+    border-color: var(--Color4);
+    background-color: var(--Color4);
+    color: var(--Color3);
+    cursor: pointer;
+}
+
+.btnSecundario {
+    font-family: var(--font-family);
+    padding: var(--Padding1);
+    border-radius: 50px;
+    border: 1px solid var(--Color1);
+    background-color: transparent;
+    color: var(--Color1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btnSecundario:hover {
+    background-color: var(--Color1);
+    color: var(--Color3);
+}

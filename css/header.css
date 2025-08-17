@@ -1,0 +1,65 @@
+header {
+    padding: 20px 40px;
+    /* Añadido padding horizontal para consistencia */
+    background-color: var(--Color1);
+    color: var(--Color3);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(100vh - var(--nav-height));
+    /* Ocupa el resto de la altura visible */
+}
+
+#descripcionPerfil {
+    width: 50%;
+}
+
+#nombrePerfil {
+    margin: var(--margen1);
+}
+
+#encabezado {
+    margin: var(--margen1);
+}
+
+#presentacion {
+    margin: var(--margen1);
+    text-shadow: var(--sombras);
+}
+
+#containerBtnPeril {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.btnPerfil {
+    margin: var(--margen1);
+    display: flex;
+    border-radius: 50%;
+    border-style: none;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: border-radius 1s;
+    cursor: pointer;
+}
+
+.btnPerfil:hover {
+    border-radius: 10px;
+}
+
+.imgBtnPeril {
+    height: 25px;
+    width: auto;
+}
+
+#fotoPerfil {
+    /* Tamaño responsivo: Mínimo 200px, preferido 25% del ancho de la pantalla, máximo 350px */
+    width: clamp(200px, 25vw, 400px);
+    height: clamp(200px, 25vw, 400px);
+    border-radius: 100%;
+    object-fit: cover;
+}

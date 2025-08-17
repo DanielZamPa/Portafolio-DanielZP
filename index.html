@@ -9,16 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Estilos base y globales -->
+    <link rel="stylesheet" href="./css/global.css">
+    <!-- Estilos de componentes -->
+    <link rel="stylesheet" href="./css/splash.css">    
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/sections.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
     <!-- Pantalla de Carga (Splash Screen) -->
     <div id="splash-screen">
         <img src="./assets/img/DZP.png" alt="Logo" id="splash-logo">
+        <h1>Daniel Zamora Páez</h1>
     </div>
-
+    <!-- Llamada animación de inicion de pagina -->
     <script src="./js/inicio.js"></script>
+
+    <!-- Inicio del navbar -->
+     <script src="./js/dropdown.js"></script>
     <nav class="nav-bar">
         <img src="./assets/img/DZP.png" alt="logoDaniel" id="logoNav">
         <div class="enlaces">
@@ -39,72 +52,6 @@
         <button class="modalContacto btnPrimario">
             Contactar
         </button>
-
-        <!-- Modal formulario de contacto -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span id="closeModal" class="close">&times;</span>
-                <h2>Contacto</h2>
-                <form 
-                  id="contactForm" 
-                  name="contact"
-                  method="POST" 
-                  data-netlify="true" 
-                  data-netlify-honeypot="bot-field"
-                >
-                    <!-- Campo oculto que Netlify usa para identificar el formulario en envíos con JS -->
-                    <input type="hidden" name="form-name" value="contact" />
-                    <!-- Campo "Honeypot" para engañar a los bots de spam. No lo borres. -->
-                    <p style="display: none;">
-                      <label>No rellenes esto si eres humano: <input name="bot-field" /></label>
-                    </p>
-                    <fieldset>
-                        <legend>Información Personal</legend>
-                        <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="telefono">Teléfono (opcional):</label>
-                        <input type="tel" id="telefono" name="telefono">
-
-                        <label for="empresa">Empresa/Organización:</label>
-                        <input type="text" id="empresa" name="empresa">
-                    </fieldset>
-
-                    <!-- 3. Motivo del contacto -->
-                    <fieldset>
-                        <label for="servicio">Tipo de servicio requerido:</label>
-                        <select id="servicio" name="servicio" required>
-                            <option value="">Seleccione...</option>
-                            <option value="diseno-web">Diseño Web</option>
-                            <option value="desarrollo-web">Desarrollo Web</option>
-                            <option value="redaccion">Redacción</option>
-                            <option value="marketing">Marketing Digital</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </fieldset>
-
-                    <!-- 4. Mensaje -->
-                    <fieldset>
-                        <legend>Mensaje</legend>
-                        <label for="mensaje">Descripción:</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-                        <label for="adjunto">Adjuntar archivo (opcional):</label>
-                        <input type="file" id="adjunto" name="adjunto">
-                    </fieldset>
-
-                    <!-- Botones modal -->
-                    <div class="form-actions">
-                        <button type="reset" class="btnSecundario">Limpiar</button>
-                        <button type="submit" class="btnPrimario">Enviar</button>
-                    </div>
-                    <p id="form-status"></p> <!-- Elemento para mostrar mensajes de estado -->
-                </form> 
-            </div>
-        </div>
     </nav>
     <header class="encabezado">
         <div id="descripcionPerfil">
@@ -205,11 +152,78 @@
         </ul>
         </p>
     </footer>
+
+    <!-- Modal formulario de contacto (Movido aquí para un correcto posicionamiento) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Contacto</h2>
+            <form 
+              id="contactForm" 
+              name="contact"
+              method="POST" 
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field"
+            >
+                <!-- Campo oculto que Netlify usa para identificar el formulario en envíos con JS -->
+                <input type="hidden" name="form-name" value="contact" />
+                <!-- Campo "Honeypot" para engañar a los bots de spam. No lo borres. -->
+                <p style="display: none;">
+                  <label>No rellenes esto si eres humano: <input name="bot-field" /></label>
+                </p>
+                <fieldset>
+                    <legend>Información Personal</legend>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="telefono">Teléfono (opcional):</label>
+                    <input type="tel" id="telefono" name="telefono">
+
+                    <label for="empresa">Empresa/Organización:</label>
+                    <input type="text" id="empresa" name="empresa">
+                </fieldset>
+
+                <!-- 3. Motivo del contacto -->
+                <fieldset>
+                    <label for="servicio">Tipo de servicio requerido:</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Seleccione...</option>
+                        <option value="diseno-web">Diseño Web</option>
+                        <option value="desarrollo-web">Desarrollo Web</option>
+                        <option value="redaccion">Redacción</option>
+                        <option value="marketing">Marketing Digital</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </fieldset>
+
+                <!-- 4. Mensaje -->
+                <fieldset>
+                    <legend>Mensaje</legend>
+                    <label for="mensaje">Descripción:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                    <label for="adjunto">Adjuntar archivo (opcional):</label>
+                    <input type="file" id="adjunto" name="adjunto">
+                </fieldset>
+
+                <!-- Botones modal -->
+                <div class="form-actions">
+                    <button type="reset" class="btnSecundario">Limpiar</button>
+                    <button type="submit" class="btnPrimario">Enviar</button>
+                </div>
+                <p id="form-status"></p> <!-- Elemento para mostrar mensajes de estado -->
+            </form> 
+        </div>
+    </div>
+
     <button id="subir">
         <img src="./assets/icons/arrow_upward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
     </button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/modal.js"></script>    
 </body>
 
 </html>
