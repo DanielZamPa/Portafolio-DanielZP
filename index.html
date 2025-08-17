@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio DZP</title>    
+    <title>Portafolio DZP</title>
     <link rel="icon" type="image/png" href="./assets/img/DZP.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
@@ -12,7 +12,7 @@
     <!-- Estilos base y globales -->
     <link rel="stylesheet" href="./css/global.css">
     <!-- Estilos de componentes -->
-    <link rel="stylesheet" href="./css/splash.css">    
+    <link rel="stylesheet" href="./css/splash.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/sections.css">
@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    <span id="inicio"></span>
     <!-- Pantalla de Carga (Splash Screen) -->
     <div id="splash-screen">
         <img src="./assets/img/DZP.png" alt="Logo" id="splash-logo">
@@ -31,7 +32,7 @@
     <script src="./js/inicio.js"></script>
 
     <!-- Inicio del navbar -->
-     <script src="./js/dropdown.js"></script>
+    <script src="./js/dropdown.js"></script>
     <nav class="nav-bar">
         <img src="./assets/img/DZP.png" alt="logoDaniel" id="logoNav">
         <div class="enlaces">
@@ -57,7 +58,8 @@
         <div id="descripcionPerfil">
             <h1 id="nombrePerfil">Daniel Zamora Páez</h1>
             <p id="presentacion">
-                Como desarrollador web, poseo una sólida base en el manejo de tecnologías <span style="font-weight: bold;">HTML, CSS y JavaScript</span>, lo que
+                Como desarrollador web, poseo una sólida base en el manejo de tecnologías <span
+                    style="font-weight: bold;">HTML, CSS y JavaScript</span>, lo que
                 me permite crear interfaces atractivas, funcionales y adaptadas a diferentes dispositivos. En el ámbito
                 del desarrollo backend, tengo experiencia trabajando con Python utilizando el framework Flask para la
                 creación de aplicaciones ligeras y escalables, así como con Java empleando Spring Boot para el
@@ -65,22 +67,21 @@
 
                 Además, cuento con conocimientos en el diseño, implementación y optimización de bases de datos
                 relacionales, especialmente con MySQL, utilizando XAMPP como entorno de desarrollo local para la gestión
-                y prueba de aplicaciones.                
+                y prueba de aplicaciones.
             </p>
             <div id="containerBtnPeril">
                 <button class="btnPerfil">
-                    <img class="imgBtnPeril" src="./assets/icons/github.svg" alt="botonGithub">
-                    <a href="https://github.com/DanielZamPa"></a>
+                    <a href="https://github.com/DanielZamPa" target="_blank"><img class="imgBtnPeril"
+                            src="./assets/icons/github.svg" alt="botonGithub"></a>
                 </button>
                 <button class="btnPerfil">
-                    <img class="imgBtnPeril" src="./assets/icons/linkedin.svg" alt="botonLikendIn">
-                    <a href=""></a>
+                    <a href="https://www.linkedin.com/in/daniel-zamora-paez" target="_blank"><img class="imgBtnPeril"
+                            src="./assets/icons/linkedin.svg" alt="botonLikendIn"></a>
                 </button>
-                <button class="btnPerfil">
+                <button class="btnPerfil" id="buttonModalCv">
                     <img class="imgBtnPeril"
                         src="./assets/icons/biodata_resume_job_application_profile_cv_vitae_curriculum_icon_232605.svg"
                         alt="botonCV">
-                    <a href="www.linkedin.com/in/daniel-zamora-paez"></a>
                 </button>
             </div>
         </div>
@@ -92,7 +93,7 @@
                 Habilidades
             </h2>
             <p class="parrafoSeccion">
-                
+
             </p>
             <div class="containerHabilidades">
                 <div class="cardHabilidad">
@@ -117,7 +118,7 @@
                     </p>
                     <div class="tarjetaTecnologias">
                         <img src="./assets/icons/" alt="html5">
-                        <img src="./assets/icons/" alt="css3">                        
+                        <img src="./assets/icons/" alt="css3">
                     </div>
                 </div>
             </div>
@@ -153,23 +154,17 @@
         </p>
     </footer>
 
-    <!-- Modal formulario de contacto (Movido aquí para un correcto posicionamiento) -->
+    <!-- Modal formulario de contacto -->
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span id="closeModal" class="close">&times;</span>
+            <span class="close closeModal">&times;</span>
             <h2>Contacto</h2>
-            <form 
-              id="contactForm" 
-              name="contact"
-              method="POST" 
-              data-netlify="true" 
-              data-netlify-honeypot="bot-field"
-            >
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                 <!-- Campo oculto que Netlify usa para identificar el formulario en envíos con JS -->
                 <input type="hidden" name="form-name" value="contact" />
                 <!-- Campo "Honeypot" para engañar a los bots de spam. No lo borres. -->
                 <p style="display: none;">
-                  <label>No rellenes esto si eres humano: <input name="bot-field" /></label>
+                    <label>No rellenes esto si eres humano: <input name="bot-field" /></label>
                 </p>
                 <fieldset>
                     <legend>Información Personal</legend>
@@ -215,15 +210,16 @@
                     <button type="submit" class="btnPrimario">Enviar</button>
                 </div>
                 <p id="form-status"></p> <!-- Elemento para mostrar mensajes de estado -->
-            </form> 
+            </form>
         </div>
-    </div>
+    </div> 
 
-    <button id="subir">
-        <img src="./assets/icons/arrow_upward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-    </button>
+    <!-- Boton para subir al principio de la pagina -->
+    <a id="subir" href="#inicio" title="Volver arriba">
+        <img src="./assets/icons/arrow_upward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Flecha hacia arriba">
+    </a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="./js/modal.js"></script>    
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>

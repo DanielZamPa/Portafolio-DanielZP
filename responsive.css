@@ -1,0 +1,6 @@
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Estilos para laptops estándar */
+}
+@media (min-width: 1441px) {
+  /* Estilos para pantallas grandes o monitores externos */
+}

@@ -1,0 +1,8 @@
+/* Estilos para el splash screen en movil */
+/*Diseño interfaz celulares pequeños*/
+@media (max-width: 480px) {
+  /* Estilos para celulares pequeños */
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Estilos para celulares grandes*/
+}

@@ -11,12 +11,18 @@ footer {
     margin-right: var(--margen1);
 }
 
-#subir{    
-    size: clamp();
-    left: 90vw;
-    bottom: 5vh;
-    position: sticky;
-    border-style: none;
-    border-radius: 50%;    
+#subir {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
     background-color: var(--Color4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    z-index: 1000;
 }

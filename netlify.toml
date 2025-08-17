@@ -1,0 +1,8 @@
+# c:\Users\Dany\OneDrive\Documents\HV_Daniel\Generation\Portafolio\netlify.toml
+[build]
+  # Directorio de publicación (asegúrate de que coincida con tu configuración)
+  publish = "." 
+
+[[forms]]
+  name = "contact" # Debe coincidir con el atributo name="" de tu formulario
+  notification_email = ["daniel.zaez@hotmail.com", "daniel.uzumakifutoon@gmail.com"] # Puedes añadir uno o más correos

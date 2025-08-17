@@ -17,6 +17,11 @@
     box-sizing: border-box; /* Mejor manejo del modelo de caja */
 }
 
+html {
+    /* Habilita el desplazamiento suave para toda la página */
+    scroll-behavior: smooth;
+}
+
 /* --- Estilo para el texto seleccionado --- */
 /* Para la mayoría de los navegadores modernos */
 ::selection {
