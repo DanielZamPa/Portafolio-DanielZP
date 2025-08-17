@@ -1,46 +1,63 @@
-#seccionHabilidades {
-    padding: 1cm;
-    text-align: center;
-}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    #seccionHabilidades {
+        padding: 1cm;      
+        text-align: center;  
+    }
 
-#proyectos {
-    background-color: var(--Color1);
-    color: var(--Color3);
-    padding: 1cm;
-    display: flex;
-}
+    #proyectos {
+        background-color: var(--Color1);
+        color: var(--Color3);
+        padding: 1cm;
+        display: flex;
+    }
 
-#seccion3 {
-    padding: 1cm;
-}
+    #seccion3 {
+        padding: 1cm;
+    }
 
-.containerHabilidades {
-    width: 100%;
-    padding: var(--Padding1);
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .containerHabilidades {
+        width: 100%;
+        padding: var(--Padding1);
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.cardHabilidad {
-    max-width: 100%;
-    max-height: 100%;
-    width: clamp(70%, 2vw, 90%);        
-    height: 40vh;
-    border: solid var(--Color1) 1px;
-    padding: var(--Padding1);
-    overflow-y: auto;
-    /* Ocultar scrollbar en Firefox */
-    scrollbar-width: none;
-}
-
-/* Ocultar scrollbar en Chrome, Safari y Edge */
-.cardHabilidad::-webkit-scrollbar {
-    display: none;
-}
-
-.tarjetaTecnologias {
-    background-color: var(--Color5);
+    .cardHabilidad {
+        max-width: 100%;
+        max-height: 100%;    
+        width: 90%;    
+        height: 40vh;
+        border: solid var(--Color1) 1px;
+        padding: var(--Padding1);
+        overflow-y: auto;
+        display: flex;                
+    }
+    #cardFrontend{
+        text-align: left;
+    }
+    #cardBackend{
+        text-align: right;
+    }
+    .tituloHabilidades{
+        max-width: 100%;
+        width: 50%;
+        margin: auto;
+    }
+    .descripcionHabilidades{
+        width: 50%;
+    }
+    #listaTecnologias{
+        flex-direction: column;
+    }
+    .tarjetaTecnologias {
+        background-color: var(--Color5);
+        max-width: 100%;        
+        width: 50%;
+    }
+    .liTecnologia{
+        list-style: none;        
+    }
 }

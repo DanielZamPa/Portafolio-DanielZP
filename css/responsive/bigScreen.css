@@ -1,1 +1,4 @@
 /* Estilos para el splash screen en pantallas grandes */
+@media (min-width: 1441px) {
+  /* Estilos para pantallas grandes o monitores externos */
+}

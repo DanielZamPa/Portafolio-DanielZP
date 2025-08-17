@@ -1,28 +1,30 @@
-footer {
-    background-color: var(--Color5);
-    color: var(--Color3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    footer {
+        background-color: var(--Color5);
+        color: var(--Color3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-#logoFooter {
-    width: 10em;
-    margin-right: var(--margen1);
-}
+    #logoFooter {
+        width: 10em;
+        margin-right: var(--margen1);
+    }
 
-#subir {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--Color4);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-    z-index: 1000;
+    #subir {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--Color4);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
 }

@@ -79,9 +79,10 @@
                             src="./assets/icons/linkedin.svg" alt="botonLikendIn"></a>
                 </button>
                 <button class="btnPerfil" id="buttonModalCv">
-                    <img class="imgBtnPeril"
-                        src="./assets/icons/biodata_resume_job_application_profile_cv_vitae_curriculum_icon_232605.svg"
-                        alt="botonCV">
+                    <a href="./archivos/CV-Generation-DanielZamora-DesarroladorWEB.pdf" target="_blank"><img
+                            class="imgBtnPeril"
+                            src="./assets/icons/biodata_resume_job_application_profile_cv_vitae_curriculum_icon_232605.svg"
+                            alt="botonCV"></a>
                 </button>
             </div>
         </div>
@@ -96,7 +97,7 @@
 
             </p>
             <div class="containerHabilidades">
-                <div class="cardHabilidad">
+                <div class="cardHabilidad" id="cardFrontend">
                     <h3 class="tituloHabilidades">
                         Frontend
                     </h3>
@@ -109,17 +110,30 @@
                         <img src="./assets/icons/icons8-javascript.svg" alt="javascript">
                     </div>
                 </div>
-                <div class="cardHabilidad">
+                <div class="cardHabilidad" id="cardBackend">
+                    <ul id="listaTecnologias">
+                        <li class="liTecnologia">
+                            <div class="tarjetaTecnologias">
+                                <img src="./assets/icons/file_type_python_icon_130221.svg" alt="">
+                            </div>
+                        </li>
+                        <li class="liTecnologia">
+                            <div class="tarjetaTecnologias">
+
+                            </div>
+                        </li>
+                        <li class="liTecnologia">
+                            <div class="tarjetaTecnologias">
+
+                            </div>
+                        </li>
+                    </ul>
                     <h3 class="tituloHabilidades">
                         Backend
                     </h3>
                     <p class="descripcionHabilidades">
-                        Creación de aplicaciones seguras, escalables y orientadas a buenas prácticas de programación.
+                        Creación de aplicaciones escalables y orientadas a buenas prácticas de programación.
                     </p>
-                    <div class="tarjetaTecnologias">
-                        <img src="./assets/icons/" alt="html5">
-                        <img src="./assets/icons/" alt="css3">
-                    </div>
                 </div>
             </div>
         </section>
@@ -157,7 +171,7 @@
     <!-- Modal formulario de contacto -->
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close closeModal">&times;</span>
+            <span class="close" id="closeModal">&times;</span>
             <h2>Contacto</h2>
             <form id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                 <!-- Campo oculto que Netlify usa para identificar el formulario en envíos con JS -->
@@ -212,14 +226,15 @@
                 <p id="form-status"></p> <!-- Elemento para mostrar mensajes de estado -->
             </form>
         </div>
-    </div> 
+    </div>
 
     <!-- Boton para subir al principio de la pagina -->
     <a id="subir" href="#inicio" title="Volver arriba">
         <img src="./assets/icons/arrow_upward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Flecha hacia arriba">
     </a>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
     <script src="./js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </body>
 
 </html>

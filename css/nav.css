@@ -1,86 +1,88 @@
-nav {
-    height: var(--nav-height);
-    background-color: var(--Color1);
-    position: relative;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    color: var(--Color3);
-    padding-inline: 3em;
-    border-bottom: solid var(--Color3) 1px;
-}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    nav {
+        height: var(--nav-height);
+        background-color: var(--Color1);
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        color: var(--Color3);
+        padding-inline: 3em;
+        border-bottom: solid var(--Color3) 1px;
+    }
 
-#logoNav {
-    width: auto;
-    height: 2em;
-    cursor: pointer;
-}
+    #logoNav {
+        width: auto;
+        height: 2em;
+        cursor: pointer;
+    }
 
-.enlaces {
-    margin-right: auto;
-    margin-left: auto;
-}
+    .enlaces {
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-.navLink {
-    padding-inline: 1rem;
-    text-decoration: none;
-    color: var(--Color3);
-    transition: 0.5s;
-}
+    .navLink {
+        padding-inline: 1rem;
+        text-decoration: none;
+        color: var(--Color3);
+        transition: 0.5s;
+    }
 
-.navLink:hover {
-    border-radius: 20px;
-    border-style: none;
-    background-color: var(--Color3);
-    color: var(--Color1);
-}
+    .navLink:hover {
+        border-radius: 20px;
+        border-style: none;
+        background-color: var(--Color3);
+        color: var(--Color1);
+    }
 
-/* Estilo del contenedor */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+    /* Estilo del contenedor */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-/* Botón de Mi trabajo */
-.dropdown-btn {    
-    color: white;    
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    background-color: var(--Color1);
-    font-family: var(--font-family);
-}
+    /* Botón de Mi trabajo */
+    .dropdown-btn {
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        background-color: var(--Color1);
+        font-family: var(--font-family);
+    }
 
-/* Contenido del dropdown (oculto por defecto) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    z-index: 10;
-}
+    /* Contenido del dropdown (oculto por defecto) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        z-index: 10;
+    }
 
-/* Estilo de los enlaces dentro del dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-radius: 20px;
-}
+    /* Estilo de los enlaces dentro del dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-radius: 20px;
+    }
 
-/* Hover sobre los enlaces */
-.dropdown-content a:hover {
-    border-radius: 20px;
-    border-style: none;
-    background-color: var(--Color3);
-    color: var(--Color1);
-}
+    /* Hover sobre los enlaces */
+    .dropdown-content a:hover {
+        border-radius: 20px;
+        border-style: none;
+        background-color: var(--Color3);
+        color: var(--Color1);
+    }
 
-/* Mostrar el contenido al hacer hover */
-.dropdown:hover .dropdown-content {    
-    display: block;
+    /* Mostrar el contenido al hacer hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 }

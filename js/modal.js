@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Seleccionar elementos del DOM de forma más segura
   const openModalButtons = document.querySelectorAll('.modalContacto');
-  const closeModalButton = document.querySelectorAll('closeModal');
+  const closeModalButton = document.getElementById('closeModal');
   const modal = document.getElementById('modal');
   const contactForm = document.getElementById('contactForm');  
 
@@ -61,10 +61,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-function iframeCV (){
-  const modalCv = document.getElementById('modalCv');
-  const button = document.getElementById('buttonModalCv');
-
-
-}
