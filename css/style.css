@@ -7,6 +7,7 @@
     --Padding1: 10px;
     --margen1: 10px;
     --font-family: "Google Sans Code", monospace;
+    --sombras: -1px -1px 5px #000000;
 }
 
 * {
@@ -15,10 +16,43 @@
     
 }
 
+/* --- Estilo para el texto seleccionado --- */
+/* Para la mayoría de los navegadores modernos */
+::selection {
+    background-color: var(--Color2); /* Fondo rojo vibrante de tu paleta */
+    color: var(--Color3);            /* Texto claro para un buen contraste */
+}
+
+/* Para compatibilidad con Firefox */
+::-moz-selection {
+    background-color: var(--Color2);
+    color: var(--Color3);
+}
+
 /* @media (min-width: 1024px) and (max-width: 1400px) {         */
 body {
     font-family: var(--font-family);    
     width: 100%;
+    background-color: var(--Color3); /* Aseguramos un color de fondo base */
+}
+
+/* --- Estilos para la Pantalla de Carga (Splash Screen) --- */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté por encima de todo */
+}
+
+#splash-logo {
+    width: clamp(100px, 20vw, 200px);
+    opacity: 0; /* Empezará invisible para la animación */
 }
 
 nav {
@@ -239,6 +273,7 @@ header {
 
 #presentacion {
     margin: var(--margen1);
+    text-shadow: var(--sombras);
 }
 
 #containerBtnPeril {

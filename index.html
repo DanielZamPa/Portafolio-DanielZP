@@ -13,6 +13,11 @@
 </head>
 
 <body>
+    <!-- Pantalla de Carga (Splash Screen) -->
+    <div id="splash-screen">
+        <img src="./assets/img/DZP.png" alt="Logo" id="splash-logo">
+    </div>
+
     <script src="./js/inicio.js"></script>
     <nav class="nav-bar">
         <img src="./assets/img/DZP.png" alt="logoDaniel" id="logoNav">
@@ -105,9 +110,15 @@
         <div id="descripcionPerfil">
             <h1 id="nombrePerfil">Daniel Zamora Páez</h1>
             <p id="presentacion">
-                Soy un desarrollador web con conocimientos sobre tecnologías frontend como HTML 5, CSS3, JavaScript y
-                Bootstrap. Con manejo backend en lenguajes como Python o java, e incluso conocimientos de diseño y
-                manejo de bases de datos SQL con MySQL y XAMPP.
+                Como desarrollador web, poseo una sólida base en el manejo de tecnologías <span style="font-weight: bold;">HTML, CSS y JavaScript</span>, lo que
+                me permite crear interfaces atractivas, funcionales y adaptadas a diferentes dispositivos. En el ámbito
+                del desarrollo backend, tengo experiencia trabajando con Python utilizando el framework Flask para la
+                creación de aplicaciones ligeras y escalables, así como con Java empleando Spring Boot para el
+                desarrollo de soluciones robustas y seguras.
+
+                Además, cuento con conocimientos en el diseño, implementación y optimización de bases de datos
+                relacionales, especialmente con MySQL, utilizando XAMPP como entorno de desarrollo local para la gestión
+                y prueba de aplicaciones.                
             </p>
             <div id="containerBtnPeril">
                 <button class="btnPerfil">
@@ -134,15 +145,7 @@
                 Habilidades
             </h2>
             <p class="parrafoSeccion">
-                Como desarrollador web, poseo una sólida base en el manejo de tecnologías HTML, CSS y JavaScript, lo que
-                me permite crear interfaces atractivas, funcionales y adaptadas a diferentes dispositivos. En el ámbito
-                del desarrollo backend, tengo experiencia trabajando con Python utilizando el framework Flask para la
-                creación de aplicaciones ligeras y escalables, así como con Java empleando Spring Boot para el
-                desarrollo de soluciones robustas y seguras.
-
-                Además, cuento con conocimientos en el diseño, implementación y optimización de bases de datos
-                relacionales, especialmente con MySQL, utilizando XAMPP como entorno de desarrollo local para la gestión
-                y prueba de aplicaciones.
+                
             </p>
             <div class="containerHabilidades">
                 <div class="cardHabilidad">
@@ -205,6 +208,7 @@
     <button id="subir">
         <img src="./assets/icons/arrow_upward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
     </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
