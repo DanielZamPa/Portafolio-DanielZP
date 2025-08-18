@@ -1,0 +1,218 @@
+/*
+  Este archivo contiene todos los estilos para el modo oscuro.
+  Se activa añadiendo la clase 'dark-mode' al <body>.
+*/
+
+/* 1. Transición suave para que el cambio de tema no sea brusco */
+body, header, section, .cardHabilidad, .btnPerfil, .modal-content, input, textarea, select, .nav-bar, .dropdown-content, .btnPrimario, .btnSecundario, #subir, .btn-adjuntar-archivo {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 2. Definición de la paleta de colores para el modo oscuro */
+body.dark-mode {
+    --Color1: #ffcdd2; /* Rojo muy claro para texto y acentos */
+    --Color2: #e57373; /* Rojo claro para hovers */
+    --Color3: #1a1a1a; /* Fondo oscuro principal para secciones */
+    --Color4: #f5f5f5; /* Texto principal muy claro */
+    --Color5: #424242; /* Gris oscuro para bordes y acentos sutiles */
+
+    /* Colores base del body */
+    background-color: #121212; /* Fondo global más oscuro */
+    color: var(--Color4);      /* Color de texto global */
+}
+
+/* 3. Ajustes específicos para componentes en modo oscuro */
+
+/* --- Texto seleccionado --- */
+body.dark-mode ::selection {
+    background-color: var(--Color2);
+    color: #000;
+}
+body.dark-mode ::-moz-selection {
+    background-color: var(--Color2);
+    color: #000;
+}
+
+/* --- Header y Navbar --- */
+body.dark-mode header {
+    background-color: #1f1f1f; /* Un gris ligeramente más claro que el body */
+    color: var(--Color4);
+}
+
+body.dark-mode .nav-bar {
+    background-color: #1f1f1f;
+    border-bottom-color: var(--Color5);
+}
+
+body.dark-mode .navLink {
+    color: var(--Color4);
+}
+
+body.dark-mode .navLink:hover {
+    background-color: var(--Color5);
+    color: white;
+}
+
+body.dark-mode .dropdown-btn {
+    background-color: transparent;
+    color: var(--Color4);
+}
+
+body.dark-mode .dropdown-content {
+    background-color: #2c2c2c;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .dropdown-content a {
+    color: var(--Color4);
+}
+
+body.dark-mode .dropdown-content a:hover {
+    background-color: var(--Color5);
+    color: white;
+}
+
+/* --- Botones --- */
+body.dark-mode .btnPrimario {
+    background-color: var(--Color3);
+    color: var(--Color1);
+    border-color: var(--Color1);
+}
+
+body.dark-mode .btnPrimario:hover {
+    background-color: var(--Color1);
+    color: var(--Color3);
+}
+
+body.dark-mode .btnSecundario {
+    color: var(--Color1);
+    border-color: var(--Color1);
+    background-color: transparent;
+}
+
+body.dark-mode .btnSecundario:hover {
+    background-color: var(--Color1);
+    color: var(--Color3);
+}
+
+body.dark-mode .btnPerfil {
+    color: var(--Color4); /* El texto del span */
+}
+
+/* --- Secciones y Tarjetas --- */
+body.dark-mode #proyectos {
+    background-color: var(--Color3);
+    color: var(--Color4);
+}
+
+body.dark-mode .cardHabilidad {
+    background-color: #2c2c2c;
+    border-color: var(--Color5);
+    border-bottom-color: var(--Color5);
+}
+
+body.dark-mode .tarjetaTecnologias span {
+    color: var(--Color4);
+}
+
+/* --- Modal de Contacto --- */
+body.dark-mode .modal-content {
+    background: #2c2c2c;
+    color: var(--Color4);
+    border: 1px solid var(--Color5);
+}
+
+body.dark-mode .modal-content h2,
+body.dark-mode .modal-content legend {
+    color: var(--Color1); /* Usamos el acento rojo claro */
+}
+
+body.dark-mode .modal-content input[type="text"],
+body.dark-mode .modal-content input[type="email"],
+body.dark-mode .modal-content input[type="tel"],
+body.dark-mode .modal-content select,
+body.dark-mode .modal-content textarea {
+    background-color: #3a3a3a; /* Fondo de input más oscuro */
+    color: var(--Color4);      /* Texto claro */
+    border-color: var(--Color5); /* Borde sutil */
+}
+
+body.dark-mode .modal-content input:focus,
+body.dark-mode .modal-content select:focus,
+body.dark-mode .modal-content textarea:focus {
+    border-color: var(--Color1);
+    box-shadow: 0 0 5px rgba(255, 205, 210, 0.3); /* Resplandor rojo claro */
+}
+
+/* Botón personalizado para adjuntar archivo */
+body.dark-mode .btn-adjuntar-archivo {
+    background-color: transparent;
+    color: var(--Color4);
+    border-color: var(--Color5);
+}
+
+body.dark-mode .btn-adjuntar-archivo:hover {
+    background-color: var(--Color5);
+    color: white;
+    border-color: var(--Color5);
+}
+
+/* Scrollbar del modal en modo oscuro */
+body.dark-mode .modal-content {
+    scrollbar-color: var(--Color5) #2c2c2c; /* pulgar y riel para Firefox */
+}
+
+body.dark-mode .modal-content::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+body.dark-mode .modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--Color5);
+    border-color: #2c2c2c;
+}
+
+body.dark-mode .modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--Color2);
+}
+
+/* --- Botón de "Subir" --- */
+body.dark-mode #subir {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode #subir:hover {
+    background-color: var(--Color5);
+}
+
+/* --- Pantalla de Carga (Splash Screen) --- */
+body.dark-mode #splash-screen {
+    background-color: #121212;
+}
+
+body.dark-mode #tituloSplash {
+    color: var(--Color4);
+}
+
+/* --- Mejora para botones del perfil --- */
+body.dark-mode .btnPerfil {
+    background-color: #3a3a3a; /* Fondo sutil para mejor contraste */
+}
+
+body.dark-mode .btnPerfil:hover {
+    background-color: var(--Color5);
+}
+
+/* --- Filtro para hacer los iconos blancos en modo oscuro --- */
+.imgBtnPeril,
+.tarjetaTecnologias img,
+#subir img {
+    transition: filter 0.3s ease;
+}
+
+/* Aplicamos el filtro solo cuando el modo oscuro está activo */
+body.dark-mode .imgBtnPeril,
+body.dark-mode .tarjetaTecnologias img,
+body.dark-mode #subir img {
+    filter: invert(1) brightness(1.5);
+}

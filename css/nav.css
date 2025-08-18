@@ -1,5 +1,5 @@
 @media (min-width: 1025px) and (max-width: 1440px) {
-    nav {
+    nav{
         height: var(--nav-height);
         background-color: var(--Color1);
         position: relative;
@@ -84,5 +84,21 @@
     /* Mostrar el contenido al hacer hover */
     .dropdown:hover .dropdown-content {
         display: block;
+    }
+
+    .btn-modo-oscuro {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        padding: 7px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+    }
+    .btn-modo-oscuro:hover{
+        background-color: var(--Color5);
     }
 }
