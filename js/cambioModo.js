@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const botonModo = document.getElementById('botonModo');
     const body = document.body;
-    // Es una buena práctica verificar si el elemento existe antes de usarlo
     if (!botonModo) return;
 
     const modoIcono = botonModo.querySelector('img');
 
-    // NOTA: Asegúrate de tener un icono de "sol" para el modo claro en esta ruta.
-    // Puedes descargarlo de Google Fonts Icons o similar.
     const iconoSol = './assets/icons/brightness_7_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg';
     const iconoLuna = './assets/icons/bedtime_30dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg';
 

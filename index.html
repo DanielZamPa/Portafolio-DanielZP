@@ -9,16 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <!-- Estilos base y globales -->
     <link rel="stylesheet" href="./css/global.css">
-    <!-- Estilos de componentes -->
     <link rel="stylesheet" href="./css/splash.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/sections.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/modal.css">
-    <!-- <link rel="stylesheet" href="./css/modo-oscuro.css"> Estilos para el modo oscuro -->
     <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
@@ -26,14 +23,12 @@
     <span id="inicio"></span>
     <!-- Pantalla de Carga (Splash Screen) -->
     <div id="splash-screen">
-        <img src="./assets/img/DZP.png" alt="Logo" id="splash-logo">
+        <img src="./assets/img/DZP.png" alt="Logo" id="splash-logo"> 
         <h1 id="tituloSplash">Daniel Zamora Páez</h1>
     </div>
-    <!-- Llamada animación de inicion de pagina -->
     <script src="./js/inicio.js"></script>
 
-    <!-- Inicio del navbar -->
-    <script src="./js/dropdown.js"></script>
+    <script src="./js/dropdown.js"></script> 
     <nav class="nav-bar">
         <img src="./assets/img/DZP.png" alt="logoDaniel" id="logoNav">
         <div class="enlaces">
@@ -45,12 +40,10 @@
                     <a class="navLink" href="#proyectos">Proyectos</a>
                 </div>
             </div>
-            <a class="navLink" href="#">Certificados</a>
+            <a class="navLink" href="#certificaciones">Certificados</a>
             <a class="navLink" href="#">Curriculum</a>
             <a class="navLink" href="#">Contacto</a>
         </div>
-
-        <!-- Boton para abrir modal de contacto -->
         <button class="modalContacto btnPrimario">
             Contactar
         </button>
@@ -152,34 +145,165 @@
                 </div>
             </div>
         </section>
-        <section id="proyectos">
-            <h2 class="tituloSeccion">
-                Seccion
-            </h2>
-            <p class="parrafoSeccion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio qui accusamus
-                est cum corporis fugiat consequuntur iste blanditiis modi quod tempora, quos iusto saepe nobis vero
-                expedita rem tenetur reprehenderit!</p>
-        </section>
         <section id="certificaciones">
             <h2 class="tituloSeccion">
-                Seccion
+                Certificaciones
             </h2>
             <p class="parrafoSeccion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio qui accusamus
                 est cum corporis fugiat consequuntur iste blanditiis modi quod tempora, quos iusto saepe nobis vero
-                expedita rem tenetur reprehenderit!</p>            
+                expedita rem tenetur reprehenderit!
+            </p>
+            <div class="containerCertificaiones">
+                <ul class="listaCertificaiones">
+                    <li class="liCertificaion">certificado 1</li>
+                    <li class="liCertificaion">certificado 2</li>
+                    <li class="liCertificaion">certificado 3</li>
+                </ul>
+                <ul class="listaCertificaiones" style="display:none;">
+                    <li class="liCertificaion">certificado 1</li>
+                    <li class="liCertificaion">certificado 2</li>
+                    <li class="liCertificaion">certificado 3</li>
+                </ul>
+            </div>
+        </section>
+        <section id="proyectos">
+            <h2 class="tituloSeccion">
+                Proyectos
+            </h2>
+            <p class="parrafoSeccion">Aquí puedes explorar algunos de los proyectos más destacados que he realizado. Cada tarjeta te ofrece una breve descripción y enlaces para ver la demostración o el código fuente.</p>
+
+            <div class="carousel-wrapper">
+                <button id="prev-btn" class="carousel-btn" aria-label="Proyecto anterior">&lt;</button>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="project-card">
+                            <img src="./assets/img/project-placeholder.jpg" alt="Proyecto 1">
+                            <h3>Proyecto Web E-commerce</h3>
+                            <p>Desarrollo de una tienda online responsiva con carrito de compras y pasarela de pago.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="btnPrimario">Ver Demo</a>
+                                <a href="#" target="_blank" class="btnSecundario">Código</a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <img src="./assets/img/project-placeholder.jpg" alt="Proyecto 2">
+                            <h3>API RESTful con Flask</h3>
+                            <p>Creación de una API para gestión de usuarios y productos, utilizando Python y Flask.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="btnPrimario">Ver Demo</a>
+                                <a href="#" target="_blank" class="btnSecundario">Código</a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <img src="./assets/img/project-placeholder.jpg" alt="Proyecto 3">
+                            <h3>Dashboard de Datos</h3>
+                            <p>Implementación de un dashboard interactivo para visualización de datos con JavaScript.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="btnPrimario">Ver Demo</a>
+                                <a href="#" target="_blank" class="btnSecundario">Código</a>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <img src="./assets/img/project-placeholder.jpg" alt="Proyecto 4">
+                            <h3>Aplicación CRUD Java Spring</h3>
+                            <p>Aplicación de gestión de tareas con Spring Boot y base de datos MySQL.</p>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="btnPrimario">Ver Demo</a>
+                                <a href="#" target="_blank" class="btnSecundario">Código</a>
+                            </div>
+                        </div>
+                        <!-- Puedes añadir más project-card aquí -->
+                    </div>
+                </div>
+                <button id="next-btn" class="carousel-btn" aria-label="Siguiente proyecto">&gt;</button>
+            </div>
+        </section>
+        <section id="servicios">
+            <h2 class="tituloSeccion">Servicios</h2>
+            <p class="parrafoSeccion">Mis servicios disponibles</p>
+            <div class="containerServicios">
+                <div class="cardServicio">
+                    <img src="./assets/icons/code_24dp_680000_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono Desarrollo Web" class="iconoServicio">
+                    <h3>Desarrollo Web</h3>
+                    <p>Creación de sitios y aplicaciones web a medida, desde el concepto hasta el despliegue, garantizando una experiencia de usuario fluida y un rendimiento óptimo.</p>
+                </div>
+                <div class="cardServicio">
+                    <img src="./assets/icons/database_24dp_780000_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono Diseño de Bases de Datos" class="iconoServicio">
+                    <h3>Diseño de Bases de Datos</h3>
+                    <p>Diseño e implementación de bases de datos relacionales eficientes y escalables, optimizadas para la integridad y rápida recuperación de los datos.</p>
+                </div>
+                <div class="cardServicio">
+                    <img src="./assets/icons/stylus_fountain_pen_24dp_780000_FILL0_wght400_GRAD0_opsz24.svg" alt="Icono Diseño UI/UX" class="iconoServicio">
+                    <h3>Diseño UI/UX</h3>
+                    <p>Diseño de interfaces de usuario intuitivas y atractivas, enfocadas en crear una experiencia de usuario memorable y satisfactoria.</p>
+                </div>
+            </div>
+        </section>
+        <section id="infoContacto">
+            <h2 class="tituloSeccion">Medios de Contacto</h2>
+            <p class="parrafoSeccion">¿Tienes una idea o un proyecto en mente? No dudes en contactarme. Completa el siguiente formulario y me pondré en contacto contigo lo antes posible.</p>
+            
+            <div class="infoContacto-flex-wrapper">
+                <div class="cardInformacion">
+                    <h3>Mis medios de contacto</h3>
+                    <p>Puedes contactarme a través de:</p>
+                    <ul>
+                        <li>Email: <a href="mailto:daniel.zaez@hotmail.com">daniel.zaez@hotmail.com</a></li>
+                        <li>Teléfono: +57 3194506584</li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/daniel-zamora-paez" target="_blank">Daniel Zamora Páez</a></li>
+                        <li>GitHub: <a href="https://github.com/DanielZamPa" target="_blank">DanielZamPa</a></li>
+                    </ul>
+                </div>
+                
+                <div class="form-en-pagina-container">
+                <form id="pageContactForm" class="form-en-pagina" name="page-contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field-page">                    
+                    <input type="hidden" name="form-name" value="page-contact" />
+                    <p style="display: none;">
+                        <label>No rellenes esto si eres humano: <input name="bot-field-page" /></label>
+                    </p>
+                    <fieldset>
+                        <legend>Información Personal</legend>
+                        <label for="nombre-page">Nombre completo:</label>
+                        <input type="text" id="nombre-page" name="nombre" placeholder="Ej: Ana García" required>
+    
+                        <label for="email-page">Correo electrónico:</label>
+                        <input type="email" id="email-page" name="email" placeholder="tu.correo@ejemplo.com" required>
+    
+                        <label for="telefono-page">Teléfono (opcional):</label>
+                        <input type="tel" id="telefono-page" name="telefono" placeholder="+57 300 123 4567">
+                    </fieldset>
+    
+                    <fieldset>
+                        <label for="servicio-page">Tipo de servicio requerido:</label>
+                        <select id="servicio-page" name="servicio" required>
+                            <option value="">Seleccione...</option>
+                            <option value="diseno-web">Diseño Web</option>
+                            <option value="desarrollo-web">Desarrollo Web</option>
+                            <option value="diseño base de datos">Diseño de Base de Datos</option>                        
+                            <option value="diseño-ui-ux">Diseño UI/UX</option>                        
+                            <option value="otro">Otro</option>
+                        </select>
+                    </fieldset>
+    
+                    <fieldset>
+                        <legend>Mensaje</legend>
+                        <label for="mensaje-page">Descripción:</label>
+                        <textarea id="mensaje-page" name="mensaje" rows="5" required></textarea>
+                    </fieldset>
+    
+                    <div class="form-actions">
+                        <button type="reset" class="btnSecundario">Limpiar</button>
+                        <button type="submit" class="btnPrimario">Enviar Mensaje</button>                        
+                    </div>
+                </form>
+                </div>
+            </div>
         </section>
     </main>
-    <!-- <footer>
-        <img id="logoFooter" src="./assets/icons/DZP-fotor-bg-remover-20250729114012.png" alt="">
-        <p>Recursos obtenidos de:
-        <ul>
-            <li><a target="_blank" href="https://icons8.com/icon/12599/github">GitHub</a> icono de <a target="_blank"
-                    href="https://icons8.com">Icons8</a></li>
-        </ul>
-        </p>
-    </footer> -->
+    <footer>
+        
+    </footer>
 
-    <!-- Modal formulario de contacto -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
@@ -187,9 +311,7 @@
             <form id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
                 <!-- Campo oculto que Netlify usa para identificar el formulario en envíos con JS -->
                 <input type="hidden" name="form-name" value="contact" />
-                <!-- Campo "Honeypot" para engañar a los bots de spam. No lo borres. -->
                 <p style="display: none;">
-                    <label>No rellenes esto si eres humano: <input name="bot-field" /></label>
                 </p>
                 <fieldset>
                     <legend>Información Personal</legend>
@@ -206,20 +328,17 @@
                     <input type="text" id="empresa" name="empresa">
                 </fieldset>
 
-                <!-- 3. Motivo del contacto -->
                 <fieldset>
                     <label for="servicio">Tipo de servicio requerido:</label>
                     <select id="servicio" name="servicio" required>
                         <option value="">Seleccione...</option>
                         <option value="diseno-web">Diseño Web</option>
                         <option value="desarrollo-web">Desarrollo Web</option>
-                        <option value="redaccion">Redacción</option>
-                        <option value="marketing">Marketing Digital</option>
+                        <option value="diseño base de datos">Diseño de bases de datos</option>                        
                         <option value="otro">Otro</option>
                     </select>
                 </fieldset>
 
-                <!-- 4. Mensaje -->
                 <fieldset>
                     <legend>Mensaje</legend>
                     <label for="mensaje">Descripción:</label>
@@ -231,23 +350,21 @@
 
                 </fieldset>
 
-                <!-- Botones modal -->
                 <div class="form-actions">
                     <button type="reset" class="btnSecundario">Limpiar</button>
                     <button type="submit" class="btnPrimario">Enviar</button>
                 </div>
-                <p id="form-status"></p> <!-- Elemento para mostrar mensajes de estado -->
+                <p id="form-status"></p>
             </form>
         </div>
     </div>
-
-    <!-- Boton para subir al principio de la pagina -->
     <a id="subir" href="#inicio" title="Volver arriba">
         <img src="./assets/icons/arrow_upward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Flecha hacia arriba">
     </a>
 
     <script src="./js/modal.js"></script>
     <script src="./js/cambioModo.js"></script>
+    <script src="./js/carousel.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </body>
 
