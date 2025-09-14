@@ -12,7 +12,7 @@
     --sombras: -1px -1px 2px #000000;
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1025px) {
 
     /* Estilos para laptops estándar */
     * {

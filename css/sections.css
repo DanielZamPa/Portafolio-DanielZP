@@ -166,7 +166,7 @@
     .project-card {
         flex: 0 0 320px; /* No crece, no se encoge, ancho base de 320px */
         background-color: var(--Color3); /* Fondo claro */
-        color: var(--Color5); /* Texto oscuro */
+        color: black;        
         border-radius: 15px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         padding: 25px;

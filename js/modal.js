@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  
+document.addEventListener('DOMContentLoaded', () => {  
   const openModalButtons = document.querySelectorAll('.modalContacto');
   const closeModalButton = document.getElementById('closeModal');
   const modal = document.getElementById('modal');
