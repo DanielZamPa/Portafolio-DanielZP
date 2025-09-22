@@ -77,4 +77,8 @@
         color: var(--Color3);
     }
 
+    .hamburger-menu {
+        display: none;
+    }
+
 }

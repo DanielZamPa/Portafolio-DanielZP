@@ -7,7 +7,8 @@
     <title>Portafolio DZP</title>
     <link rel="icon" type="image/png" href="./assets/img/DZP.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/splash.css">
     <link rel="stylesheet" href="./css/nav.css">
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="./css/modal.css">
     <link rel="stylesheet" href="./css/responsive/movil.css">
     <link rel="stylesheet" href="./css/responsive/tablets.css">
+    <link rel="stylesheet" href="./css/responsive/bigScreen.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
@@ -32,7 +34,12 @@
     <script src="./js/dropdown.js"></script>
     <nav class="nav-bar">
         <img src="./assets/img/DZP.png" alt="logoDaniel" id="logoNav">
-        <div class="enlaces">
+        <button class="hamburger-menu" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <div class="enlaces" id="nav-links">
             <a class="navLink" href="#encabezado">Inicio</a>
             <div class="dropdown">
                 <button class="dropdown-btn navLink">Mi Trabajo</button>
@@ -80,7 +87,7 @@
                     <span>LINKEDIN</span>
                 </button>
                 <button class="btnPerfil" id="buttonModalCv">
-                    <a href="./archivos/CV-Generation-DanielZamora-DesarroladorWEB.pdf" target="_blank"><img
+                    <a href="./archivos/DanielZamoraPaez_CV.pdf" target="_blank"><img
                             class="imgBtnPeril"
                             src="./assets/icons/biodata_resume_job_application_profile_cv_vitae_curriculum_icon_232605.svg"
                             alt="botonCV"></a>
@@ -151,20 +158,18 @@
             <h2 class="tituloSeccion">
                 Certificaciones
             </h2>
-            <p class="parrafoSeccion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio qui accusamus
-                est cum corporis fugiat consequuntur iste blanditiis modi quod tempora, quos iusto saepe nobis vero
-                expedita rem tenetur reprehenderit!
+            <p class="parrafoSeccion">
+                Aquí encontrarás una selección de mis certificaciones más relevantes, que demuestran mi compromiso con
+                el aprendizaje continuo y mi dominio en diversas tecnologías y herramientas del desarrollo web.
             </p>
             <div class="containerCertificaiones">
                 <ul class="listaCertificaiones">
                     <li class="liCertificaion">
-                        <div data-iframe-width="150" data-iframe-height="270"
+                        <div data-iframe-width="auto" data-iframe-height="270"
                             data-share-badge-id="e7451bbd-88e3-4e10-822e-e4d42334b833"
                             data-share-badge-host="https://www.credly.com"></div>
                         <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
                     </li>
-                    <li class="liCertificaion">certificado 2</li>
-                    <li class="liCertificaion">certificado 3</li>
                 </ul>
                 <ul class="listaCertificaiones" style="display:none;">
                     <li class="liCertificaion">certificado 1</li>
@@ -255,8 +260,8 @@
             </div>
         </section>
         <section id="infoContacto">
-            <h2 class="tituloSeccion">Medios de Contacto</h2>
-            <p class="parrafoSeccion">¿Tienes una idea o un proyecto en mente? No dudes en contactarme. Completa el
+            <h2 class="tituloSeccion" style="color: white; margin-bottom: 1rem; text-shadow: -1px -1px 50px #000;"><strong>Medios de Contacto</strong></h2>
+            <p class="parrafoSeccion" style="color: white;">¿Tienes una idea o un proyecto en mente? No dudes en contactarme. Completa el
                 siguiente formulario y me pondré en contacto contigo lo antes posible.</p>
 
             <div class="infoContacto-flex-wrapper">

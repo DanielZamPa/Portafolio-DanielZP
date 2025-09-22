@@ -1,4 +1,24 @@
 /* Estilos para el splash screen en pantallas grandes */
 @media (min-width: 1441px) {
   /* Estilos para pantallas grandes o monitores externos */
+  body {
+    font-size: 18px;
+  }
+
+  .nav-bar, header.encabezado, section, footer {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+  }
+
+  .tituloSeccion {
+    font-size: 3em;
+  }
+
+  #descripcionPerfil {
+    max-width: 700px;
+  }
+
+  .project-card {
+    flex-basis: calc(33.333% - 20px);
+  }
 }

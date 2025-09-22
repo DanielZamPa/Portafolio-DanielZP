@@ -15,6 +15,12 @@
 
   .tituloSeccion {
     font-size: 2.2em;
+    color: var(--Color1);
+  }
+
+  .cardHabilidad, .project-card, .cardServicio, .cardInformacion, .form-en-pagina {
+    border: 1px solid var(--Color5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   /* --- Header --- */

@@ -90,13 +90,13 @@
         border-radius: 15px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         list-style: none;
-        text-align: left;
+        text-align: center;        
     }
-    .liCertificaion {
+    .liCertificaion {        
         padding: 10px 15px;
         border-bottom: 1px solid var(--Color5);
         transition: background-color 0.2s ease;
-    }
+    }    
     .liCertificaion:last-child {
         border-bottom: none; /* Quita el borde del último elemento */
     }

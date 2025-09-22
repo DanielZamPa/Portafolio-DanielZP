@@ -78,9 +78,22 @@
     text-align: center;
   }
 
+  a {
+    color: var(--Color4);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: var(--Color2);
+  }
+
+  #seccionHabilidades,
+  #servicios {
+    background-color: #fdf0d5d2; /* Usando una ligera transparencia del Color3 */
+  }
+
   /* --- Barra de Navegación --- */
-  /* NOTA: Para un menú móvil completo, se necesita un "botón de hamburguesa" y JavaScript.
-     Por ahora, los enlaces principales se ocultarán en pantallas pequeñas. */
   .nav-bar {
     padding: 0 15px;
     justify-content: space-between;
@@ -96,9 +109,99 @@
     height: 40px;
   }
 
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2.25rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    position: absolute;
+    right: 60px; /* Ajustado para no superponerse con el botón de modo oscuro */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hamburger-line {
+    width: 2.25rem;
+    height: 0.25rem;
+    background-color: var(--Color4);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+  .hamburger-menu.is-active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .hamburger-menu.is-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  .hamburger-menu.is-active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
   .nav-bar .enlaces {
-    display: none;
-    /* Oculto para móvil. Se requiere JS para un menú de hamburguesa. */
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--Color3);
+    border-top: 1px solid var(--Color5);
+    padding: 0;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .nav-bar .enlaces.mobile-menu-open {
+    display: flex; /* Se muestra con JS */
+  }
+
+  .nav-bar .enlaces .navLink {
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 1px solid var(--Color5);
+    display: block;
+  }
+  
+  .nav-bar .enlaces .navLink:last-child {
+      border-bottom: none;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-btn {
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: static;
+    /* display: none; /* JS lo controla */
+    background-color: var(--Color4);
+    width: 100%;
+    padding: 0;
+  }
+
+  .dropdown-content a {
+      color: var(--Color3);
+      padding: 12px 0;
+      display: block;
+      border-bottom: 1px solid var(--Color5);
+  }
+  .dropdown-content a:last-child {
+      border-bottom: none;
   }
 
   .nav-bar .modalContacto {
@@ -226,8 +329,6 @@
 
   /* --- Modal --- */
   .modal-content {
-    width: 90%;
-    max-height: 80vh;
-    padding: 40px 20px 20px 20px;
+    display: none;
   }
 }

@@ -8,4 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // New hamburger menu logic
+  const hamburger = document.querySelector('.hamburger-menu');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-menu-open');
+      const isExpanded = navLinks.classList.contains('mobile-menu-open');
+      hamburger.setAttribute('aria-expanded', isExpanded);
+      hamburger.classList.toggle('is-active');
+    });
+  }
 });

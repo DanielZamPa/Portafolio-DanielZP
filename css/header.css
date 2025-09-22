@@ -15,6 +15,7 @@
 
     #nombrePerfil {
         margin: var(--margen1);
+        text-shadow: var(--sombras);
     }
 
     #encabezado {
