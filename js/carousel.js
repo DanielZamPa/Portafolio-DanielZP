@@ -16,18 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const cardWidth = cards[0].offsetWidth; // Ancho real de una tarjeta, incluyendo padding y borde
-    const gap = 30;
-    
-    // Cantidad a desplazar: 3 tarjetas + 2 espacios entre ellas
-    const scrollAmount = (cardWidth * 3) + (gap * 2);
+    const getScrollAmount = () => {
+        // Desplazamos por el ancho visible del contenedor. Es más robusto para diferentes tamaños de pantalla.
+        return carouselScrollContainer.clientWidth;
+    }
 
     nextBtn.addEventListener('click', () => { // Mover al siguiente conjunto de proyectos
-        carouselScrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        carouselScrollContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
     });
 
     prevBtn.addEventListener('click', () => { // Mover al conjunto de proyectos anterior
-        carouselScrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        carouselScrollContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
     });
     
     const updateButtonState = () => { // Habilitar/deshabilitar botones según la posición de desplazamiento

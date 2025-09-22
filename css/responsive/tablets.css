@@ -1,4 +1,77 @@
 /* Estilos para el splash screen en tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /* Estilos para tablets en modo vertical u horizontal */
+
+  /* --- Estilos Generales --- */
+  body {
+    font-size: 15px;
+    /* Ligeramente más grande que en móvil */
+  }
+
+  section {
+    padding: 60px 40px;
+    /* Más padding que en móvil */
+  }
+
+  .tituloSeccion {
+    font-size: 2.2em;
+  }
+
+  /* --- Header --- */
+  /* El layout de columna del móvil sigue siendo adecuado, pero con más espacio */
+  header.encabezado {
+    padding-top: 120px;
+    /* Más espacio para la nav-bar fija */
+    padding-bottom: 60px;
+  }
+
+  #descripcionPerfil {
+    max-width: 650px;
+    /* Limitar el ancho del texto para mejor legibilidad */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* --- Sección Habilidades --- */
+  /* Mostramos las tarjetas de habilidad una al lado de la otra */
+  .containerHabilidades {
+    flex-direction: row;
+    gap: 25px;
+    align-items: stretch;
+    /* Asegura que las tarjetas tengan la misma altura */
+  }
+
+  /* --- Sección Proyectos (Carrusel) --- */
+  /* Mostramos 2 tarjetas de proyecto a la vez */
+  .project-card {
+    flex-basis: calc(50% - 15px);
+    /* 2 tarjetas con un gap de 30px */
+    max-width: none;
+    /* Anulamos el max-width de móvil */
+  }
+
+  .carousel-track {
+    padding: 0 25px;
+    gap: 30px;
+  }
+
+  /* En tablet, los botones de navegación del carrusel son útiles */
+  .carousel-btn {
+    display: flex;
+    /* Mostramos los botones que estaban ocultos en móvil */
+  }
+
+  /* --- Sección Servicios --- */
+  /* Mostramos los servicios en una cuadrícula de 2 columnas */
+  .containerServicios {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* --- Sección Contacto --- */
+  /* Ponemos la información de contacto y el formulario lado a lado */
+  .infoContacto-flex-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
